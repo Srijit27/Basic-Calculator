@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A simple interactive calculator built using HTML5, CSS3 and JavaScript." />
+    <title>Interactive Calculator</title>
+    <link rel="stylesheet" href="style.css" /> 
+</head>
+
+<body>
+    <main class="calculator" role="application" aria-label="Calculator">
+        
+        <section class="display">
+            <input
+                type="text"
+                id="display"
+                value="0"
+                aria-label="Calculator display"
+                readonly/>
+        </section>
+
+        <section class="buttons">
+      
+            <button class="clear" data-action="clear">C</button>
+            <button class="div operator" data-operator="divide">÷</button>
+            <button class="mul operator" data-operator="multiply">×</button>
+            <button class="backspace" data-action="backspace">←</button>
+
+            <button class="digit 7" data-number="7">7</button>
+            <button class="digit 8" data-number="8">8</button>
+            <button class="digit 9" data-number="9">9</button>
+            <button class="sub operator" data-operator="subtract">−</button>
+
+            <button class="digit 4" data-number="4">4</button>
+            <button class="digit 5" data-number="5">5</button>
+            <button class="digit 6" data-number="6">6</button>
+            <button class="add operator" data-operator="add">+</button>
+
+            <button class="digit 1" data-number="1">1</button>
+            <button class="digit 2" data-number="2">2</button>
+            <button class="digit 3" data-number="3">3</button>
+            <button class="equal" data-action="equals">=</button>
+
+            <button class="digit 0" data-number="0">0</button>
+            <button class="decimal point" data-number=".">.</button>
+        </section>
+    </main>
+
+    <!-- <script src="script.js" defer></script> -->
+</body>
+</html>

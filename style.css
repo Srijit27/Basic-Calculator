@@ -1,0 +1,138 @@
+*,
+*::before,
+*::after {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:root{
+    --bg-main: #0f172a;
+    --bg-calculator: #020617;
+    --bg-display: #020617;
+    --bg-button: #1e293b;
+    --bg-operator: #334155;
+    --bg-equal: #22c55e;
+    --bg-clear: #ef4444;
+
+    --text-primary: #f8fafc;
+    --text-secondary: #cbd5f5;
+
+    --radius: 14px;
+    --transition: 0.15s ease;
+}
+
+body{
+    min-height:100vh;
+    background-color:var(--bg-main);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    color:var(--text-primary);
+}
+
+/* ------------------------------
+   Calculator Layout
+------------------------------- */
+.calculator {
+    width:320px;
+    background-color:rgba(30, 9, 94, 0.6);
+    border-radius:var(--radius);
+     border: 5px solid #5a1609;
+    padding:1.5rem;
+    box-shadow:0 20px 40px rgba(20, 13, 41, 0.6);
+}
+
+/* ------------------------------
+   Display
+------------------------------- */
+.display {
+    margin-bottom: 1rem;
+}
+
+#display {
+    width: 100%;
+    height: 64px;
+    background-color: var(--bg-display);
+    border: none;
+    border-radius: var(--radius);
+    padding: 0 1rem;
+    font-size: 2rem;
+    text-align: right;
+    color: var(--text-primary);
+    outline: none;
+}
+
+/* ------------------------------
+   Buttons Grid
+------------------------------- */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.6rem;
+}
+
+/* ------------------------------
+   Buttons Base
+------------------------------- */
+.btn {
+    height: 56px;
+    border: none;
+    border-radius: var(--radius);
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    background-color: var(--bg-button);
+    color: var(--text-primary);
+    transition: transform var(--transition),
+                background-color var(--transition),
+                box-shadow var(--transition);
+}
+
+.btn:hover {
+    background-color: #475569;
+}
+
+.btn:active {
+    transform: scale(0.96);
+    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.4);
+}
+
+/* ------------------------------
+   Button Variants
+------------------------------- */
+.operator {
+    background-color: var(--bg-operator);
+}
+
+.equal {
+    background-color: var(--bg-equal);
+    color: #022c22;
+    grid-row: span 2;
+}
+
+.clear {
+    background-color: var(--bg-clear);
+}
+
+.backspace {
+    background-color: #64748b;
+}
+
+/* ------------------------------
+   Special Buttons
+------------------------------- */
+.zero {
+    grid-column: span 2;
+}
+
+/* ------------------------------
+   Responsive
+------------------------------- */
+@media (max-width: 360px) {
+    .calculator {
+        width: 100%;
+        margin: 0 1rem;
+    }
+}
