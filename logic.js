@@ -18,6 +18,12 @@ let operator=null;
 function updateDisplay() 
 {
     display.value=currentInput;
+    if(currentInput==="Error" || currentInput==="Math ERROR") 
+    {
+        display.classList.add("error");
+    }else{
+        display.classList.remove("error");
+    }
 }
 
 function resetCalculator() 
@@ -66,7 +72,7 @@ function compute()
        currentInput==="" ||
        currentInput==="Error")
     {
-        currentInput=" 'Error' ";
+        currentInput="Error";
         previousInput=null;
         operator=null;
         updateDisplay();
@@ -93,7 +99,7 @@ function compute()
             break;
         case "divide":
             if(curr===0){
-                currentInput=" 'Math ERROR' ";
+                currentInput="Math ERROR";
                 previousInput=null;
                 operator=null;
                 updateDisplay();
@@ -116,7 +122,7 @@ function backspace()
 {
     if (currentInput.length===1)
     {
-        currentInput = "0";
+        currentInput="0";
     }else{
         currentInput=currentInput.slice(0,-1);
     }

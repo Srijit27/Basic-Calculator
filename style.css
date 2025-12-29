@@ -109,10 +109,18 @@ body{
     grid-column: span 2;
 }
 
+/* Error State*/
+#display.error
+{
+    color:#ef4444; /* red text */
+    text-shadow:0 0 8px rgba(239, 68, 68, 0.6);
+}
+
+
 /* ------------------------------
    Responsive
 ------------------------------- */
-@media (max-width: 360px) {
+@media(max-width: 360px) {
     .calculator {
         width: 100%;
         margin: 0 1rem;
