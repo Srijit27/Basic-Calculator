@@ -41,7 +41,7 @@ fundamentals** before moving on to **ReactJS**.
 
 ------------------------------------------------------------------------
 
-## ▶️ How to Use (How to Play)
+## ▶️ How to Use 
 
 1.  Clone the repository:
 
