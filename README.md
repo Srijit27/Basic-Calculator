@@ -46,7 +46,7 @@ fundamentals** before moving on to **ReactJS**.
 1.  Clone the repository:
 
     ``` bash
-    git clone https://github.com/your-username/basic-calculator.git
+    git clone https://github.com/Srijit27/Basic-Calculator.git
     ```
 
 2.  Open the project folder.
